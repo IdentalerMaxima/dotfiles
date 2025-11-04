@@ -24,4 +24,5 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover / Info" })
 -- Show diagnostic floating window
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 
-
+-- Open file explorer
+vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
