@@ -2,11 +2,19 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason.nvim" },
     config = function()
-        local lspconfig = require("lspconfig")
+        local mason = require("mason")
+        mason.setup()
 
-        -- example: install pyright and tsserver
-        lspconfig.pyright.setup({})
-        lspconfig.ts_ls.setup({})
+        -- New API style
+        vim.lsp.start({
+            name = "pyright",
+            cmd = { "pyright-langserver", "--stdio" },
+        })
+
+        vim.lsp.start({
+            name = "tsserver",
+            cmd = { "typescript-language-server", "--stdio" },
+        })
     end
 }
 

@@ -39,7 +39,7 @@ caps  a s d f g h j k l ;
 (defchords mtr $chord-timeout
   (i  ) i
   (  o) o
-  (i o) bspc
+  (i o) ret
 )
 
 (defchords mbl $chord-timeout
@@ -51,7 +51,7 @@ caps  a s d f g h j k l ;
 (defchords mbr $chord-timeout
   (,  ) ,
   (  .) (t! charmod . ralt)
-  (, .) ret
+  (, .) bspc
 )
 
 (deflayermap (main)
@@ -117,7 +117,7 @@ caps  a s d f g h j k l ;
 (defchords ftr $chord-timeout
   (i  ) f8
   (  o) f9
-  (i o) bspc
+  (i o) ret 
 )
 
 (defchords fbl $chord-timeout
@@ -129,7 +129,7 @@ caps  a s d f g h j k l ;
 (defchords fbr $chord-timeout
   (,  ) [
   (  .) (t! charmod ] ralt)
-  (, .) ret
+  (, .) bspc
 )
 
 (deflayermap (fumbol)

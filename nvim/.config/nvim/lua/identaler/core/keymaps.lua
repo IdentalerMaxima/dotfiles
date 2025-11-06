@@ -11,7 +11,7 @@ map("n", "<leader>c", ":%y+<CR>", { desc = "Yank entire file", remap = false })
 map("v", "<leader>c", '"+y', { desc = "Yank selection to clipboard", remap = false })
 
 -- Toggle file tree
-map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
+-- map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle file tree" })
 
 -- Buffer navigation
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
