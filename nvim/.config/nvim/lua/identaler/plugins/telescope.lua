@@ -4,7 +4,7 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = "Telescope",
     keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+      { "<leader>ff", "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", desc = "Find Files" },
       { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
       { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
@@ -16,6 +16,8 @@ return {
           selection_caret = " ",
           path_display = { "smart" },
           file_ignore_patterns = { "node_modules", ".git/" },
+          hidden = true,
+          no_ignore = true,
         },
       })
     end,
