@@ -26,3 +26,6 @@ vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show diagn
 
 -- Open file explorer
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
+
+-- Terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
