@@ -39,7 +39,8 @@ caps  a s d f g h j k l ;
 (defchords mtr $chord-timeout
   (i  ) i
   (  o) o
-  (i o) ret
+  ;;(i o) ret
+  ;;todo
 )
 
 (defchords mbl $chord-timeout
