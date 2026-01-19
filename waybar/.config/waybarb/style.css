@@ -7,13 +7,22 @@
     font-weight: bold;
 }
 
+/* window#waybar { */
+/*     background: transparent; */
+/*     background-color: @crust; */
+/*     color: @overlay0; */
+/*     transition-property: background-color; */
+/*     transition-duration: 0.1s; */
+/*     border-bottom: 1px solid @overlay1; */
+/* } */
+/**/
+
 window#waybar {
-    background: transparent;
-    background-color: @crust;
-    color: @overlay0;
+    background: rgba(0, 0, 0, 0);  /* fully transparent */
+    border: none;                   /* remove bottom border */
+    color: @overlay0;               /* keep text color */
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
 }
 
 #window {
