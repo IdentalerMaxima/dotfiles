@@ -17,6 +17,7 @@ map("v", "<leader>c", '"+y', { desc = "Yank selection to clipboard", remap = fal
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Previous buffer" })
 map("n", "<leader>bd", ":bdelete<CR>", { desc = "Close buffer" })
+map("n", "<leader>bb", "<C-^>", { desc = "Go to last buffer" })
 
 -- Hover info
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover / Info" })
