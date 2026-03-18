@@ -6,6 +6,7 @@ return {
         "nvim-treesitter/playground",  -- add this line
     },
     config = function()
+        require("nvim-treesitter.install").compilers = { "zig" }
         require("nvim-treesitter.configs").setup({
             ensure_installed = { "lua", "python", "javascript" },
             highlight = { enable = true },

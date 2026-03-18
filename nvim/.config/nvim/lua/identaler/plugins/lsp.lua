@@ -25,6 +25,26 @@ return {
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)         -- jump to previous error
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)         -- jump to next error
         vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts) -- populate location list
+
+        -- Copy diagnostic under cursor
+        vim.keymap.set("n", "<leader>lc", function()
+            local line = vim.fn.line(".") - 1
+            local diags = vim.diagnostic.get(0, { lnum = line })
+            if diags[1] then
+                vim.fn.setreg("+", diags[1].message)
+                vim.notify("LSP diagnostic copied")
+            else
+                vim.notify("No diagnostic on this line")
+            end
+        end, opts)
+
+        -- LSP “go to definition” keymap
+        local opts = { noremap = true, silent = true }
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+        vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+        vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+
     end
 }
 

@@ -29,3 +29,17 @@ vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "Open file explorer" })
 
 -- Terminal
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+vim.keymap.set("n", "<leader>t", function()
+  -- Look for existing terminal buffers
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.bo[buf].buftype == "terminal" then
+      -- Jump to it
+      vim.api.nvim_set_current_buf(buf)
+      return
+    end
+  end
+  -- If none exists, open a new terminal in current window
+  vim.cmd("term")
+end, { desc = "Terminal in current buffer" })
+

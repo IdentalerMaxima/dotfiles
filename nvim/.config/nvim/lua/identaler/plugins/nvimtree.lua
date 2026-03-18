@@ -8,7 +8,7 @@ return {
         auto_reload_on_write = true,
         hijack_cursor = true,
         update_cwd = true,
-        view = { width = 30, side = "left" },
+        view = { width = 50, side = "left" },
         filters = { dotfiles = false },
       })
 
