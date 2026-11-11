@@ -5,7 +5,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/mode"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["tray", "pulseaudio", "battery", "clock"],
     "hyprland/mode": {
         "format": " {}"
     },
@@ -32,18 +32,6 @@
             "critical": 10
         },
         "tooltip": false
-    },
-    "network": {
-        "format": "{icon}",
-        "format-alt": "{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-right",
-        "format-icons": {
-            "wifi": ["", "" ,""],
-            "ethernet": [""],
-            "disconnected": [""]
-        },
-        "on-click": "nm-connection-editor",
-    "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon}",

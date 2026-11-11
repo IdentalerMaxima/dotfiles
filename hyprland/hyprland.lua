@@ -189,8 +189,6 @@ hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
-
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("brave"))

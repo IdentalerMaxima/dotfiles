@@ -2,22 +2,15 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason.nvim" },
     config = function()
-        local mason = require("mason")
-        mason.setup()
+        require("mason").setup()
 
-        local lspconfig = require("lspconfig")
-        local util = require("lspconfig.util")
+        vim.lsp.config("pyright", {})
+        vim.lsp.enable("pyright")
 
-        -- Pyright
-        lspconfig.pyright.setup({})
-
-        -- TSServer
-        lspconfig.tsserver.setup({
+        vim.lsp.config("ts_ls", {
             cmd = { "typescript-language-server", "--stdio" },
-            root_dir = function(fname)
-                return util.root_pattern("tsconfig.json", "package.json", ".git")(fname)
-            end,
         })
+        vim.lsp.enable("ts_ls")
 
         -- Keymaps for LSP diagnostics 
         local opts = { noremap = true, silent = true }
@@ -39,7 +32,6 @@ return {
         end, opts)
 
         -- LSP “go to definition” keymap
-        local opts = { noremap = true, silent = true }
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
         vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)

@@ -1,2 +1,2 @@
 require("identaler.core")
-require("identaler.plugins")
+require("identaler.lazy")
