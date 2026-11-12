@@ -25,7 +25,7 @@
         "format": "{capacity}% {icon}",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""],
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "interval": 30,
         "states": {
             "warning": 25,
@@ -94,12 +94,6 @@
         "return-type": "json",
         "exec": "~/.config/waybar/modules/mail.py",
         "tooltip": false
-    },
-    "custom/test": {
-        "format": "{}",
-        "exec": "/tmp/test blub",
-        "param": "blah",
-        "interval": 5
     },
     "tray": {
         "icon-size": 18
